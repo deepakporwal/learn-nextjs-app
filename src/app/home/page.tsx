@@ -1,5 +1,5 @@
 'use client';
-
+import { redirect } from "next/navigation";
 export default function Home(){
     return (
         <div style={{
@@ -51,6 +51,23 @@ export default function Home(){
                 onClick={() => alert('Button clicked!')}
             >
                 Click Me
+            </button>
+            <button
+                style={{
+                    marginTop: '16px',
+                    padding: '12px 32px',
+                    backgroundColor: '#e11d48',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: '8px',
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    boxShadow: '0 2px 8px rgba(225,29,72,0.12)'
+                }}
+                onClick={() => redirect('/users')}
+            >
+                Go to Users
             </button>
         </div>
     );
